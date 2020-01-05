@@ -24,7 +24,7 @@ jobs:
             php: '7.4'
             script:
                 - ./check_trailing_whitespaces.sh
-                - composer analyse
+                - composer test
 
         -   stage: Test
             php: '7.1'
