@@ -15,6 +15,8 @@ final class TokenRemover
 {
     public static function removeWithLinesIfPossible(Tokens $tokens, int $index): void
     {
-        $tokens->clearTokenMergeSurroundingWhitespaceRemoveLineIfLeftEmpty($index);
+        $tr = new \PhpCsFixer\Tokenizer\Manipulators\TokenRemover($tokens);
+
+        $tr->clearToken($index);
     }
 }
